@@ -1,0 +1,74 @@
+#containerbox {
+  width: 90%;
+  height: 80%;
+  margin-left:10%; 
+  padding-top: 50px;
+}
+.container{
+  width: 80%;
+  margin: 0 auto
+}
+#controller {
+  width: 10%;
+  height: 80%;
+}
+
+path {
+  fill: none;
+  stroke: #4682b4;
+  stroke-width: 2;
+}
+
+.domain, .tick line {
+    fill:none;
+    stroke: gray;
+    stroke-width: 1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Style the header */
+.head-menu {
+  background-color: #f5f5f5;
+  padding: 5px;
+  text-align: center;
+  font-size: 35px;
+}
+
+/* Create three equal columns that floats next to each other */
+.menu-left {
+  float: left;
+  width: 10%;
+  padding: 10px;
+  height: 600px;
+  border-right: 1px solid #bfbfbf; 
+   /* Should be removed. Only for demonstration */
+}
+.menu-left li{
+  margin-top: 5px;
+}
+.menu-left li a{
+  color: #595959;
+}
+ul li{
+  list-style-type:none;
+  width: auto;
+  white-space: nowrap;
+}
+
+/* Clear floats after the columns */
+
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
