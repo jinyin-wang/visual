@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css"/>
+    
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    
+</head>
+<body>
+
+
+          <div class="head-menu">
+              Stastistics of wage
+          </div>
+          
+          <div class="row">
+            <div class="menu-left" style="background-color:#fff;">
+                    <ul class="docs-nav" id="menu-left" style="padding: 0">
+                            <li><a id="edu-wage" href="#" class=" ">education-wage</a></li>
+                            <li><a id="sector-wage" href="#" class=" ">occupation-wage</a></li>
+                            <li><a id="expert-wage" href="#" class=" ">experience-wage</a></li>
+                
+              </ul>
+            </div>
+            <div class="containerbox" id="containerbox" >
+              <div class="container" id="container">
+
+              </div>
+            </div>
+
+          </div>
+          
+          <div class="footer">
+              <p>
+                  <label for="amount">change the width：</label>
+                  <input type="range" min="2", max = "16" id="amount"  value ="10" style="border:0; color:#f6931f; font-weight:bold;">
+                </p>
+              <div id="slider" style="display:none"></div>
+            
+          </div>  
+    
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="js/imooc_bar_rect_original.js"></script>
+    <script src="js/data.js"></script>
+    <link rel="stylesheet" href="css/bar.css" media="screen" type="text/css"/>
+    <script>
+      document.getElementById("edu-wage").onclick=function(){parameterChoose(1)};
+      document.getElementById("sector-wage").onclick=function(){parameterChoose(2)};
+      document.getElementById("expert-wage").onclick=function(){parameterChoose(3)};
+      
+
+      // document.getElementById("slider").onchange=function(){sliderChoose($( "#slider" ).slider( "value" ))};
+      </script> 
+  <link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+  <script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="jqueryui/style.css">
+  <script>
+  $(function() {
+    var value_old = 5;
+    $( "#slider" ).slider({
+      range: "max",
+      min: 1,
+      max: 10,
+      value: 5,
+      slide: function( event, ui ) {
+        $( "#amount" ).val( ui.value );
+        // alert("变化了");
+      }
+    });
+    
+    $( "#amount" ).val( $( "#slider" ).slider( "value" ) );
+    var value_new= $( "#slider" ).slider( "value" )
+    if(value_new!=value_old){
+      value_old=value_new;
+      sliderChoose(value_new);
+      alert("变化了");
+    }
+  });
+  
+  $("#amount").on("change",function () {
+    // var value_old = 5;
+    
+    // var value_new = $( "#amount" ).val();
+    // if(value_new!=value_old){
+    //   value_old=value_new;
+    var value_new = $( "#amount" ).val();
+      sliderChoose(value_new);
+      // alert("变化了");
+    }
+
+)
+
+  </script>
+
+</body>
+</html>
